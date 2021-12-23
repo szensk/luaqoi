@@ -351,5 +351,7 @@ return {
     read = qoi_read,
     write = qoi_write,
     decode = qoi_decode,
-    encode = qoi_encode
+    encode = qoi_encode,
+    SRGB = QOI_SRGB,
+    LINEAR = QOI_LINEAR
 }
