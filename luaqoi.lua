@@ -110,7 +110,6 @@ local function qoi_encode(data, desc)
     px_len = desc.width * desc.height * desc.channels
     px_end = px_len - desc.channels
     channels = desc.channels
-
     px_pos = 0
     while px_pos < px_len
     do
@@ -162,7 +161,7 @@ local function qoi_encode(data, desc)
                         p = p + 1
                     elseif vgr > -9 and vgr < 8 and
                          vg > -33 and vg < 32 and
-                         vgb > -0 and vgb < 8
+                         vgb > -9 and vgb < 8
                     then
                         bytes[p] = bor(QOI_OP_LUMA, vg + 32); p = p + 1
                         bytes[p] = bor(lshift(vgr + 8, 4), vgb + 8); p = p + 1
